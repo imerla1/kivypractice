@@ -1,0 +1,32 @@
+AddLocationForm
+
+<AddLocationForm>:
+
+    orientaion: 'vertical'
+    search_input: search_box
+
+
+    TextInput:
+        id: search_box
+        size_hint: None, None
+        width: sp(root.width/2)
+        height: sp(35)
+        pos: (0, root.height-35)
+    Button: #Search Button
+        id: search_button
+        text: 'Search'
+        size_hint: None, None
+        width: sp(root.width/4)
+        height: sp(35)
+        pos: (search_box.width, root.height-35)
+    Button:
+        text: 'Current Location'
+        size_hint: None, None
+        width: sp(root.width - (search_box.width+search_button.width))
+        height: sp(35)
+        pos: (search_box.width+search_button.width,root.height-35)
+    ListView:
+        id: search_result_list
+        size_hint_y: .8
+        item_strings: ['Hello, uk']
+    ListView:
